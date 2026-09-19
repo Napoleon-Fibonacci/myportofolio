@@ -1,21 +1,3 @@
-/* ============================================================
-   Ditzzx — Portofolio · script.js
-   Vanilla JS. Render project, reveal on scroll, parallax foto.
-   ============================================================ */
-
-/* ============================================================
-   1. DATA PROJECT — TAMBAH / EDIT PROJECT DI SINI
-   ------------------------------------------------------------
-   Salin satu objek, ganti datanya:
-
-   {
-     title: "Nama Project",
-     description: "Deskripsi singkat 1-2 kalimat.",
-     tech: ["HTML", "CSS"],
-     demo: "https://link-demo.com",        // "" kalau belum ada
-     repo: "https://github.com/kamu/repo", // "" kalau privat
-   },
-   ============================================================ */
 const PROJECTS = [
   {
     title: "Ditzzx Snippets",
@@ -43,11 +25,6 @@ const PROJECTS = [
   },
 ];
 
-/* ---------------------------------------------------------------
-   Render kartu project ke #projectList
-   Kartu dengan demo jadi <a> full-card (klik di mana pun redirect).
-   Tanpa demo: tetap <article> statis + label "Segera".
-   --------------------------------------------------------------- */
 (function renderProjects() {
   const list = document.getElementById("projectList");
   if (!list) return;
@@ -100,10 +77,10 @@ const PROJECTS = [
     links.className = "p-links";
 
     if (isLink) {
-      // hanya penanda visual; seluruh kartu sudah bisa diklik
+
       const open = document.createElement("span");
       open.className = "p-link";
-      open.innerHTML = `Lihat Project ${linkIcon}`;
+      open.innerHTML = `<span class="p-link-text">Lihat Project</span> <span class="p-link-icon">${linkIcon}</span>`;
       links.appendChild(open);
     } else {
       const soon = document.createElement("span");
@@ -120,9 +97,6 @@ const PROJECTS = [
   list.appendChild(frag);
 })();
 
-/* ------------------------------------------------------------
-   1b. Marquee: gandakan isi track biar loop -50% mulus
-   ------------------------------------------------------------ */
 (function initMarquee() {
   document.querySelectorAll(".marquee-track").forEach((track) => {
     const set = track.querySelector(".m-set");
@@ -131,9 +105,6 @@ const PROJECTS = [
   });
 })();
 
-/* ------------------------------------------------------------
-   2. Reveal on scroll — IntersectionObserver
-   ------------------------------------------------------------ */
 (function initReveal() {
   const items = document.querySelectorAll("[data-reveal]");
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -158,15 +129,11 @@ const PROJECTS = [
   items.forEach((el) => io.observe(el));
 })();
 
-/* ------------------------------------------------------------
-   3. Parallax ringan HANYA di foto hero — elemen [data-parallax]
-   transform via rAF; tidak menyentuh layout, hormati reduce motion
-   ------------------------------------------------------------ */
 (function initParallax() {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const coarse = window.matchMedia("(pointer: coarse)").matches;
   const layers = document.querySelectorAll("[data-parallax]");
-  if (reduce || coarse || layers.length === 0) return; // di layar sentuh: skip, hemat baterai
+  if (reduce || coarse || layers.length === 0) return;
 
   let ticking = false;
 
@@ -191,9 +158,6 @@ const PROJECTS = [
   );
 })();
 
-/* ------------------------------------------------------------
-   4. Nav: hamburger (mobile) + hairline scroll + tahun footer
-   ------------------------------------------------------------ */
 (function initNav() {
   const nav = document.querySelector(".nav");
   const onScroll = () => {
@@ -206,9 +170,6 @@ const PROJECTS = [
   if (year) year.textContent = new Date().getFullYear();
 })();
 
-/* ------------------------------------------------------------
-   5. Menu mobile: toggle hamburger, tutup saat klik link / Escape
-   ------------------------------------------------------------ */
 (function initMobileMenu() {
   const toggle = document.querySelector(".nav-toggle");
   const panel = document.getElementById("site-nav");
@@ -224,12 +185,10 @@ const PROJECTS = [
     setOpen(toggle.getAttribute("aria-expanded") !== "true");
   });
 
-  // tutup setelah pilih menu
   panel.addEventListener("click", (e) => {
     if (e.target.closest("a")) setOpen(false);
   });
 
-  // tutup dengan Escape + kembalikan fokus ke tombol
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && panel.classList.contains("open")) {
       setOpen(false);
