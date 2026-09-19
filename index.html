@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ditzzx - Portofolio</title>
+  <meta name="description" content="Portofolio pribadi Ditzzx: proyek pilihan, tech stack, dan cara menghubungi." />
+  <meta name="theme-color" content="#0A0E14" />
+  <meta name="color-scheme" content="dark" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Kalau JavaScript dimatikan, elemen reveal tetap terlihat -->
+  <noscript>
+    <style>[data-reveal] { opacity: 1 !important; transform: none !important; }
+    .marquee-track { animation: none !important; flex-wrap: wrap; width: auto; }</style>
+  </noscript>
+</head>
+<body>
+  <a class="skip-link" href="#projects">Langsung ke proyek</a>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="top">
+    <div class="wrap nav-inner">
+      <!-- EDIT: ganti nama -->
+      <a class="brand" href="#home">Ditzzx<span>.</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Buka menu">
+        <span class="nt-bar"></span>
+        <span class="nt-bar"></span>
+      </button>
+      <nav id="site-nav" aria-label="Navigasi utama">
+        <div class="nav-links">
+          <a href="#about">Tentang</a>
+          <a href="#stack">Stack</a>
+          <a href="#projects">Proyek</a>
+          <a href="#contact">Kontak</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO / ABOUT ================= -->
+    <section class="hero" id="home">
+      <div class="wrap hero-inner">
+        <p class="hero-kicker" data-reveal>Halo, saya Ditzzx</p>
+        <!-- EDIT: tagline / judul hero -->
+        <h1 class="hero-title" data-reveal style="--d:80ms">
+          Belajar pengembangan web sejak akhir 2024, kini merancang dan <em>membangun aplikasi</em> web serta mobile dari dasar.
+        </h1>
+        <!-- EDIT: bio singkat 1-2 kalimat -->
+        <p class="hero-lede" data-reveal style="--d:160ms">
+          Berfokus pada pengembangan antarmuka yang responsif, terstruktur,
+          dan nyaman digunakan — mulai dari pemilihan tipografi hingga
+          detail interaksi pada setiap elemen.
+        </p>
+        <div class="hero-actions" data-reveal style="--d:240ms">
+          <a class="btn btn-primary" href="#projects">
+            Lihat Proyek
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v13" /><path d="M6 12l6 6 6-6" /></svg>
+          </a>
+          <a class="btn btn-ghost" href="#about">Tentang Saya</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TENTANG ================= -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <h2>Kenalan lebih <em>dekat</em>.</h2>
+        </div>
+
+        <div class="about-grid" data-reveal style="--d:120ms">
+          <!-- EDIT: taruh fotomu di assets/avatar.jpg (rasio potret, ideal 600x750
+             atau lebih besar, mis. 900x1125). Sebelum foto ada, yang tampil
+             monogram "D". Foto tampil 4:5, object-fit cover, jadi wajah tetap
+             terpotong rapi -->
+          <figure class="portrait">
+            <img
+              src="assets/avatar.png"
+              alt="Foto Ditzzx"
+              width="900"
+              height="1125"
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement('div'),{className:'portrait-fallback',innerHTML:'<span>D</span>'}))"
+            />
+            <figcaption class="portrait-cap">Ditzzx · Web Developer</figcaption>
+          </figure>
+
+          <div class="about-copy">
+            <!-- EDIT: ceritakan dirimu di sini, 2 paragraf cukup -->
+            <p>
+              Saya Ditzzx (Raditya Khautal Khaer), mulai belajar coding sejak
+              akhir 2024 karena penasaran dengan cara kerja sebuah website.
+              Rasa penasaran itu berkembang menjadi fokus serius di bidang
+              software engineering, khususnya pengembangan web dan aplikasi mobile.
+            </p>
+            <p>
+              Bagian favoritku? Momen kecil saat detail menyala: transisi yang pas,
+              layout yang tidak berantakan di layar kecil, dan halaman yang dibuka
+              dalam sekejap.
+            </p>
+            <p class="about-sign">Ditzzx<span>.</span></p>
+          </div>
+
+          <!-- EDIT: fakta singkat tentang kamu -->
+          <ul class="about-facts">
+            <li><span>Fokus</span>Software Engineer — Web &amp; Mobile App</li>
+            <li><span>Stack</span>HTML, CSS, JavaScript, Node.js, Supabase</li>
+            <li><span>Sedang belajar</span>Next.js</li>
+            <li><span>Terbuka untuk</span>proyek freelance &amp; kolaborasi</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TECH STACK ================= -->
+    <section class="section" id="stack">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <h2>Perangkat yang saya pakai <em>sehari-hari</em>.</h2>
+          <p>Dipakai untuk bikin proyek nyata, bukan cuma kelar tutorial.</p>
+        </div>
+      </div>
+
+      <!-- EDIT: skill-mu. Tambah pill baru dengan menduplikasi satu blok .pill.
+           Duplikasi untuk loop marquee dilakukan otomatis oleh script.js -->
+      <div class="marquee-zone" data-reveal style="--d:120ms">
+        <p class="marquee-label">Build &amp; database</p>
+        <div class="marquee">
+          <div class="marquee-track">
+            <div class="m-set">
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 8-4 4 4 4" /><path d="m15 8 4 4-4 4" /></svg>
+                HTML
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 4C6.5 4 6 5 6 6.8v2.4C6 10.7 5 12 3.5 12 5 12 6 13.3 6 14.8v2.4C6 19 6.5 20 8.5 20" /><path d="M15.5 4c2 0 2.5 1 2.5 2.8v2.4c0 1.5 1 2.8 2.5 2.8-1.5 0-2.5 1.3-2.5 2.8v2.4c0 1.8-.5 2.8-2.5 2.8" /></svg>
+                CSS
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5" /><text x="12" y="15.8" text-anchor="middle" font-size="7.5" font-weight="700" fill="currentColor" stroke="none">JS</text></svg>
+                JavaScript
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.9 19.4 7.1v8.6L12 19.9 4.6 15.7V7.1Z" /></svg>
+                Node.js
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M13 2.5 5.5 13H11l-1 8.5L17.5 11H12l1-8.5Z" /></svg>
+                Supabase
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <p class="marquee-label">Tools &amp; deploy</p>
+        <div class="marquee reverse">
+          <div class="marquee-track">
+            <div class="m-set">
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="6" r="2.2" /><circle cx="6" cy="18" r="2.2" /><circle cx="18" cy="7.5" r="2.2" /><path d="M6 8.2v7.6" /><path d="M18 9.7c0 3.4-3.9 4.4-7.4 5.1-.9.2-1.8.4-2.6.7" /></svg>
+                GitHub
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 4.5 20.5 19h-17Z" /></svg>
+                Vercel
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5" /><text x="12" y="15.8" text-anchor="middle" font-size="7.5" font-weight="700" fill="currentColor" stroke="none">VS</text></svg>
+                VS Code
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 14.6 9l6.1.9-4.4 4.3 1 6-5.3-2.8L6.7 20.2l1-6-4.4-4.3L9.4 9Z" /></svg>
+                Claude
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M8 9.5c0-1.4 1.5-2.3 3-2.3s3 .9 3 2.3c0 1.7-3 2-3 4.3" /><circle cx="11" cy="16.5" r=".6" fill="currentColor" stroke="none" /></svg>
+                ChatGPT
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <h2>Karya &amp; <em>eksperimen</em>.</h2>
+          <p>Kumpulan proyek pribadi yang telah dikembangkan dan diselesaikan,
+            mencerminkan proses belajar dan penerapan keterampilan secara nyata.</p>
+        </div>
+
+        <div class="project-list" id="projectList">
+          <noscript>
+            <p class="p-soon">Daftar proyek dirender dengan JavaScript. Aktifkan JS untuk melihatnya.</p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <h2>Punya ide? <em>Ngobrol, yuk.</em></h2>
+          <p>Untuk kerja sama, tanya-tanya, atau sekadar menyapa.</p>
+        </div>
+
+        <div class="contact-rows" data-reveal style="--d:120ms">
+          <a class="contact-row" href="https://github.com/Ditzzx-vibecoder" target="_blank" rel="noopener noreferrer">
+            <span class="cr-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="6" r="2.2" /><circle cx="6" cy="18" r="2.2" /><circle cx="18" cy="7.5" r="2.2" /><path d="M6 8.2v7.6" /><path d="M18 9.7c0 3.4-3.9 4.4-7.4 5.1-.9.2-1.8.4-2.6.7" /></svg>
+            </span>
+            <span class="cr-text">
+              <strong>GitHub</strong>
+              <span>Ditzzx-vibecoder</span>
+            </span>
+            <span class="cr-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M8 7h9v9" /></svg>
+            </span>
+          </a>
+
+          <!-- EDIT: ganti @usernamekamu dengan username TikTok-mu -->
+          <a class="contact-row" href="https://www.tiktok.com/@ditz_coding" target="_blank" rel="noopener noreferrer">
+            <span class="cr-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4.5v9.6a4.4 4.4 0 1 1-4.4-4.4" /><path d="M14.5 6.7c.8 1.9 2.4 3.1 4.5 3.4" /></svg>
+            </span>
+            <span class="cr-text">
+              <strong>TikTok</strong>
+              <span>@ditz_coding</span>
+            </span>
+            <span class="cr-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M8 7h9v9" /></svg>
+            </span>
+          </a>
+
+          <!-- EDIT: ganti @usernamekamu dengan username Telegram-mu -->
+          <a class="contact-row" href="https://t.me/DitzzxVibe" target="_blank" rel="noopener noreferrer">
+            <span class="cr-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4Z" /></svg>
+            </span>
+            <span class="cr-text">
+              <strong>Telegram</strong>
+              <span>@DitzzxVibe</span>
+            </span>
+            <span class="cr-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M8 7h9v9" /></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Ditzzx. Dibangun tanpa framework, cukup HTML, CSS, dan JS.</p>
+      <a href="#top">Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
