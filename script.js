@@ -98,11 +98,53 @@ const PROJECTS = [
 })();
 
 (function initMarquee() {
-  document.querySelectorAll(".marquee-track").forEach((track) => {
-    const set = track.querySelector(".m-set");
-    if (!set) return;
-    track.appendChild(set.cloneNode(true));
-  });
+  const tracks = Array.from(document.querySelectorAll(".marquee-track"));
+  if (!tracks.length) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const build = (track) => {
+    const base = track.querySelector(".m-set:not([data-clone])");
+    track.querySelectorAll(".m-set[data-clone]").forEach((node) => node.remove());
+    if (!base || reduceMotion) return;
+
+    const setWidth = base.getBoundingClientRect().width;
+    if (!setWidth) return;
+
+    // Satu paruh track harus menutupi seluruh lebar viewport supaya baris
+    // marquee benar-benar penuh dari ujung ke ujung. Jumlah set dibuat genap
+    // agar translateX(-50%) tetap presisi dan loop tidak melompat.
+    const perHalf = Math.max(1, Math.ceil(window.innerWidth / setWidth));
+    const totalSets = perHalf * 2;
+
+    const frag = document.createDocumentFragment();
+    for (let i = 1; i < totalSets; i += 1) {
+      const clone = base.cloneNode(true);
+      clone.setAttribute("data-clone", "");
+      clone.setAttribute("aria-hidden", "true");
+      frag.appendChild(clone);
+    }
+    track.appendChild(frag);
+
+    // Kecepatan tetap sama seperti sebelumnya: satu lebar set per 32 detik.
+    track.style.animationDuration = `${32 * perHalf}s`;
+  };
+
+  const sync = () => tracks.forEach(build);
+  sync();
+
+  let raf = 0;
+  window.addEventListener(
+    "resize",
+    () => {
+      if (raf) return;
+      raf = window.requestAnimationFrame(() => {
+        raf = 0;
+        sync();
+      });
+    },
+    { passive: true }
+  );
 })();
 
 (function initReveal() {
