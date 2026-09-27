@@ -1,5 +1,21 @@
 const PROJECTS = [
   {
+    title: "COST QR Generator",
+    description:
+      "Generator QR Code gratis dari COST. Bikin QR untuk link, WiFi, kontak, dan teks, lengkap dengan kustom warna serta logo, tanpa login.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    demo: "https://qrgen.cost.biz.id/",
+    repo: "",
+  },
+  {
+    title: "HTML Runner",
+    description:
+      "Editor pratinjau instan untuk HTML, CSS, dan JavaScript langsung di browser. Mode gabung atau terpisah, plus export dan bagikan lewat link.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    demo: "https://runner.cost.biz.id/",
+    repo: "",
+  },
+  {
     title: "Ditzzx Snippets",
     description:
       "Library snippet Node.js dan JavaScript pribadi. Bisa telusuri per kategori, filter tag, lalu salin atau unduh langsung.",
@@ -8,7 +24,7 @@ const PROJECTS = [
     repo: "",
   },
   {
-    title: "COST — Club of Science and Technology",
+    title: "COST - Club of Science and Technology",
     description:
       "Website resmi ekstrakurikuler sains & teknologi sekolah: profil klub, sejarah, kegiatan, dan galeri foto.",
     tech: ["HTML", "CSS", "JavaScript", "Node.js", "Supabase"],
@@ -28,6 +44,15 @@ const PROJECTS = [
 (function renderProjects() {
   const list = document.getElementById("projectList");
   if (!list) return;
+
+  if (PROJECTS.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "p-soon";
+    empty.textContent =
+      "Belum ada proyek. Tambahkan data pada array PROJECTS di script.js.";
+    list.appendChild(empty);
+    return;
+  }
 
   const frag = document.createDocumentFragment();
 
@@ -171,42 +196,19 @@ const PROJECTS = [
   items.forEach((el) => io.observe(el));
 })();
 
-(function initParallax() {
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const coarse = window.matchMedia("(pointer: coarse)").matches;
-  const layers = document.querySelectorAll("[data-parallax]");
-  if (reduce || coarse || layers.length === 0) return;
-
-  let ticking = false;
-
-  const update = () => {
-    const y = window.scrollY;
-    layers.forEach((el) => {
-      const factor = parseFloat(el.dataset.parallax) || 0;
-      el.style.transform = `translate3d(0, ${y * factor}px, 0)`;
-    });
-    ticking = false;
-  };
-
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(update);
-      }
-    },
-    { passive: true }
-  );
-})();
-
 (function initNav() {
   const nav = document.querySelector(".nav");
-  const onScroll = () => {
-    if (nav) nav.classList.toggle("is-scrolled", window.scrollY > 8);
-  };
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  const sentinel = document.querySelector(".nav-sentinel");
+
+  if (nav && sentinel && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        nav.classList.toggle("is-scrolled", !entries[0].isIntersecting);
+      },
+      { threshold: 0 }
+    );
+    io.observe(sentinel);
+  }
 
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();

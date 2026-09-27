@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ditzzx — Web Developer & Portofolio</title>
+  <title>Ditzzx - Web Developer & Portofolio</title>
   <meta name="description" content="Portofolio pribadi Ditzzx (Raditya Khautal Khaer): proyek web & mobile, tech stack, dan cara menghubungi. Fokus pada antarmuka responsif dan terstruktur." />
   <meta name="author" content="Ditzzx (Raditya Khautal Khaer)" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -14,12 +14,12 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ditzzx" />
-  <meta property="og:title" content="Ditzzx — Web Developer & Portofolio" />
+  <meta property="og:title" content="Ditzzx - Web Developer & Portofolio" />
   <meta property="og:description" content="Portofolio pribadi Ditzzx (Raditya Khautal Khaer): proyek web & mobile, tech stack, dan cara menghubungi. Fokus pada antarmuka responsif dan terstruktur." />
   <meta property="og:locale" content="id_ID" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Ditzzx — Web Developer & Portofolio" />
+  <meta name="twitter:title" content="Ditzzx - Web Developer & Portofolio" />
   <meta name="twitter:description" content="Portofolio pribadi Ditzzx (Raditya Khautal Khaer): proyek web & mobile, tech stack, dan cara menghubungi. Fokus pada antarmuka responsif dan terstruktur." />
 
   <script type="application/ld+json">
@@ -39,8 +39,9 @@
     }
   </script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/bricolage-grotesque@5/index.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5/index.min.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5/index.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5/index.min.css" />
 
   <link rel="stylesheet" href="style.css" />
 
@@ -70,17 +71,17 @@
     </div>
   </header>
 
+  <div class="nav-sentinel" aria-hidden="true"></div>
+
   <main>
     <section class="hero" id="home">
       <div class="wrap hero-inner">
         <p class="hero-kicker" data-reveal>Halo, saya Ditzzx</p>
         <h1 class="hero-title" data-reveal style="--d:80ms">
-          Belajar pengembangan web sejak akhir 2024, kini merancang dan <em>membangun aplikasi</em> web serta mobile dari dasar.
+          Merancang dan <em>membangun</em> aplikasi web serta mobile dari dasar.
         </h1>
         <p class="hero-lede" data-reveal style="--d:160ms">
-          Berfokus pada pengembangan antarmuka yang responsif, terstruktur,
-          dan nyaman digunakan — mulai dari pemilihan tipografi hingga
-          detail interaksi pada setiap elemen.
+          Fokus pada antarmuka yang responsif, terstruktur, dan nyaman dipakai.
         </p>
         <div class="hero-actions" data-reveal style="--d:240ms">
           <a class="btn btn-primary" href="#projects">
@@ -98,7 +99,7 @@
     <section class="section" id="about">
       <div class="wrap">
         <div class="sec-head" data-reveal>
-          <h2>Kenalan lebih <em>dekat</em>.</h2>
+          <h2>About <em>Me</em>.</h2>
         </div>
 
         <div class="about-grid" data-reveal style="--d:120ms">
@@ -131,10 +132,34 @@
           </div>
 
           <ul class="about-facts">
-            <li><span>Fokus</span>Software Engineer — Web &amp; Mobile App</li>
-            <li><span>Stack</span>HTML, CSS, JavaScript, Node.js, Supabase</li>
-            <li><span>Sedang belajar</span>Next.js</li>
-            <li><span>Terbuka untuk</span>proyek freelance &amp; kolaborasi</li>
+            <li>
+              <span class="fact-head">
+                <span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="3.2" /><path d="M12 2.6v3M12 18.4v3M2.6 12h3M18.4 12h3" /></svg></span>
+                <span class="fact-label">Fokus</span>
+              </span>
+              Software Engineer, Web &amp; Mobile App
+            </li>
+            <li>
+              <span class="fact-head">
+                <span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 21 8l-9 5-9-5 9-5Z" /><path d="m3 13 9 5 9-5" /></svg></span>
+                <span class="fact-label">Stack</span>
+              </span>
+              HTML, CSS, JavaScript, Node.js, Supabase
+            </li>
+            <li>
+              <span class="fact-head">
+                <span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2 9l10 5 10-5-10-5Z" /><path d="M6 11.4V16c0 1.4 2.7 2.6 6 2.6s6-1.2 6-2.6v-4.6" /></svg></span>
+                <span class="fact-label">Sedang belajar</span>
+              </span>
+              Next.js
+            </li>
+            <li>
+              <span class="fact-head">
+                <span class="fact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3.4 1.9 5.4 5.6 1.9-5.6 1.9L12 17.9l-1.9-5.3-5.6-1.9 5.6-1.9L12 3.4Z" /><path d="M19 3.6v3.4M17.3 5.3h3.4" /></svg></span>
+                <span class="fact-label">Terbuka untuk</span>
+              </span>
+              proyek freelance &amp; kolaborasi
+            </li>
           </ul>
         </div>
       </div>
@@ -149,7 +174,7 @@
       </div>
 
       <div class="marquee-zone" data-reveal style="--d:120ms">
-        <p class="marquee-label">Build &amp; database</p>
+        <p class="marquee-label"><span class="label-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3" /><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6" /><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" /></svg></span>Build &amp; database</p>
         <div class="marquee">
           <div class="marquee-track">
             <div class="m-set">
@@ -327,9 +352,9 @@
             </div>
           </div>
         </div>
-        <p class="marquee-label">AI &amp; tools</p>
-        <div class="marquee reverse">
-          <div class="marquee-track">
+        <p class="marquee-label"><span class="label-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3.4 1.9 5.4 5.6 1.9-5.6 1.9L12 17.9l-1.9-5.3-5.6-1.9 5.6-1.9L12 3.4Z" /><path d="M18.8 3.6v3.2M17.2 5.2h3.2" /></svg></span>AI &amp; tools</p>
+        <div class="tool-grid">
+          <div class="tool-grid-track">
             <div class="m-set">
               <span class="pill"><svg class="pill-img" viewBox="0 0 24 24" aria-hidden="true"><path d="M0.228341 8.36915C0.228341 8.36915 -0.356212 7.94324 0.345251 7.37453L1.97956 5.89736C1.97956 5.89736 2.44721 5.40004 2.94164 5.83334L18.0231 17.375V22.9094C18.0231 22.9094 18.0158 23.7785 16.9124 23.6825L0.228341 8.36915Z" fill="currentColor"/>
 <path d="M4.11555 11.9367L0.228273 15.5089C0.228273 15.5089 -0.171172 15.8093 0.228273 16.346L2.03308 18.0053C2.03308 18.0053 2.46175 18.4706 3.09502 17.9413L7.21611 14.7827L4.11555 11.9367Z" fill="currentColor"/>
@@ -340,6 +365,10 @@
         <path fill="#d97757" stroke="none" d="M 233.959793 800.214905 L 468.644287 668.536987 L 472.590637 657.100647 L 468.644287 650.738403 L 457.208069 650.738403 L 417.986633 648.322144 L 283.892639 644.69812 L 167.597321 639.865845 L 54.926208 633.825623 L 26.577238 627.785339 L 3.3e-05 592.751709 L 2.73832 575.27533 L 26.577238 559.248352 L 60.724873 562.228149 L 136.187973 567.382629 L 249.422867 575.194763 L 331.570496 580.026978 L 453.261841 592.671082 L 472.590637 592.671082 L 475.328857 584.859009 L 468.724915 580.026978 L 463.570557 575.194763 L 346.389313 495.785217 L 219.543671 411.865906 L 153.100723 363.543762 L 117.181267 339.060425 L 99.060455 316.107361 L 91.248367 266.01355 L 123.865784 230.093994 L 167.677887 233.073853 L 178.872513 236.053772 L 223.248367 270.201477 L 318.040283 343.570496 L 441.825592 434.738342 L 459.946411 449.798706 L 467.194672 444.64447 L 468.080597 441.020203 L 459.946411 427.409485 L 392.617493 305.718323 L 320.778564 181.932983 L 288.80542 130.630859 L 280.348999 99.865845 C 277.369171 87.221436 275.194641 76.590698 275.194641 63.624268 L 312.322174 13.20813 L 332.8591 6.604126 L 382.389313 13.20813 L 403.248352 31.328979 L 434.013519 101.71814 L 483.865753 212.537048 L 561.181274 363.221497 L 583.812134 407.919434 L 595.892639 449.315491 L 600.40271 461.959839 L 608.214783 461.959839 L 608.214783 454.711609 L 614.577271 369.825623 L 626.335632 265.61084 L 637.771851 131.516846 L 641.718201 93.745117 L 660.402832 48.483276 L 697.530334 24.000122 L 726.52356 37.852417 L 750.362549 72 L 747.060486 94.067139 L 732.886047 186.201416 L 705.100708 330.52356 L 686.979919 427.167847 L 697.530334 427.167847 L 709.61084 415.087341 L 758.496704 350.174561 L 840.644348 247.490051 L 876.885925 206.738342 L 919.167847 161.71814 L 946.308838 140.29541 L 997.61084 140.29541 L 1035.38269 196.429626 L 1018.469849 254.416199 L 965.637634 321.422852 L 921.825562 378.201538 L 859.006714 462.765259 L 819.785278 530.41626 L 823.409424 535.812073 L 832.75177 534.92627 L 974.657776 504.724915 L 1051.328979 490.872559 L 1142.818848 475.167786 L 1184.214844 494.496582 L 1188.724854 514.147644 L 1172.456421 554.335693 L 1074.604126 578.496765 L 959.838989 601.449829 L 788.939636 641.879272 L 786.845764 643.409485 L 789.261841 646.389343 L 866.255127 653.637634 L 899.194702 655.409424 L 979.812134 655.409424 L 1129.932861 666.604187 L 1169.154419 692.537109 L 1192.671265 724.268677 L 1188.724854 748.429688 L 1128.322144 779.194641 L 1046.818848 759.865845 L 856.590759 714.604126 L 791.355774 698.335754 L 782.335693 698.335754 L 782.335693 703.731567 L 836.69812 756.885986 L 936.322205 846.845581 L 1061.073975 962.81897 L 1067.436279 991.490112 L 1051.409424 1014.120911 L 1034.496704 1011.704712 L 924.885986 929.234924 L 882.604126 892.107544 L 786.845764 811.48999 L 780.483276 811.48999 L 780.483276 819.946289 L 802.550415 852.241699 L 919.087341 1027.409424 L 925.127625 1081.127686 L 916.671204 1098.604126 L 886.469849 1109.154419 L 853.288696 1103.114136 L 785.073914 1007.355835 L 714.684631 899.516785 L 657.906067 802.872498 L 650.979858 806.81897 L 617.476624 1167.704834 L 601.771851 1186.147705 L 565.530212 1200 L 535.328857 1177.046997 L 519.302124 1139.919556 L 535.328857 1066.550537 L 554.657776 970.792053 L 570.362488 894.68457 L 584.536926 800.134277 L 592.993347 768.724976 L 592.429626 766.630859 L 585.503479 767.516968 L 514.22821 865.369263 L 405.825531 1011.865906 L 320.053711 1103.677979 L 299.516815 1111.812256 L 263.919525 1093.369263 L 267.221497 1060.429688 L 287.114136 1031.114136 L 405.825531 880.107361 L 477.422913 786.52356 L 523.651062 732.483276 L 523.328918 724.671265 L 520.590698 724.671265 L 205.288605 929.395935 L 149.154434 936.644409 L 124.993355 914.01355 L 127.973183 876.885986 L 139.409409 864.80542 L 234.201385 799.570435 L 233.879227 799.8927 Z"/>
     </g></svg>Claude</span>
               <span class="pill"><svg class="pill-img" viewBox="0 0 512 509.639" aria-hidden="true"><path fill="#fff" d="M115.612 0h280.775C459.974 0 512 52.026 512 115.612v278.415c0 63.587-52.026 115.613-115.613 115.613H115.612C52.026 509.64 0 457.614 0 394.027V115.612C0 52.026 52.026 0 115.612 0z"/><path fill-rule="nonzero" d="M412.037 221.764a90.834 90.834 0 004.648-28.67 90.79 90.79 0 00-12.443-45.87c-16.37-28.496-46.738-46.089-79.605-46.089-6.466 0-12.943.683-19.264 2.04a90.765 90.765 0 00-67.881-30.515h-.576c-.059.002-.149.002-.216.002-39.807 0-75.108 25.686-87.346 63.554-25.626 5.239-47.748 21.31-60.682 44.03a91.873 91.873 0 00-12.407 46.077 91.833 91.833 0 0023.694 61.553 90.802 90.802 0 00-4.649 28.67 90.804 90.804 0 0012.442 45.87c16.369 28.504 46.74 46.087 79.61 46.087a91.81 91.81 0 0019.253-2.04 90.783 90.783 0 0067.887 30.516h.576l.234-.001c39.829 0 75.119-25.686 87.357-63.588 25.626-5.242 47.748-21.312 60.682-44.033a91.718 91.718 0 0012.383-46.035 91.83 91.83 0 00-23.693-61.553l-.004-.005zM275.102 413.161h-.094a68.146 68.146 0 01-43.611-15.8 56.936 56.936 0 002.155-1.221l72.54-41.901a11.799 11.799 0 005.962-10.251V241.651l30.661 17.704c.326.163.55.479.596.84v84.693c-.042 37.653-30.554 68.198-68.21 68.273h.001zm-146.689-62.649a68.128 68.128 0 01-9.152-34.085c0-3.904.341-7.817 1.005-11.663.539.323 1.48.897 2.155 1.285l72.54 41.901a11.832 11.832 0 0011.918-.002l88.563-51.137v35.408a1.1 1.1 0 01-.438.94l-73.33 42.339a68.43 68.43 0 01-34.11 9.12 68.359 68.359 0 01-59.15-34.11l-.001.004zm-19.083-158.36a68.044 68.044 0 0135.538-29.934c0 .625-.036 1.731-.036 2.5v83.801l-.001.07a11.79 11.79 0 005.954 10.242l88.564 51.13-30.661 17.704a1.096 1.096 0 01-1.034.093l-73.337-42.375a68.36 68.36 0 01-34.095-59.143 68.412 68.412 0 019.112-34.085l-.004-.003zm251.907 58.621l-88.563-51.137 30.661-17.697a1.097 1.097 0 011.034-.094l73.337 42.339c21.109 12.195 34.132 34.746 34.132 59.132 0 28.604-17.849 54.199-44.686 64.078v-86.308c.004-.032.004-.065.004-.096 0-4.219-2.261-8.119-5.919-10.217zm30.518-45.93c-.539-.331-1.48-.898-2.155-1.286l-72.54-41.901a11.842 11.842 0 00-5.958-1.611c-2.092 0-4.15.558-5.957 1.611l-88.564 51.137v-35.408l-.001-.061a1.1 1.1 0 01.44-.88l73.33-42.303a68.301 68.301 0 0134.108-9.129c37.704 0 68.281 30.577 68.281 68.281a68.69 68.69 0 01-.984 11.545v.005zm-191.843 63.109l-30.668-17.704a1.09 1.09 0 01-.596-.84v-84.692c.016-37.685 30.593-68.236 68.281-68.236a68.332 68.332 0 0143.689 15.804 63.09 63.09 0 00-2.155 1.222l-72.54 41.9a11.794 11.794 0 00-5.961 10.248v.068l-.05 102.23zm16.655-35.91l39.445-22.782 39.444 22.767v45.55l-39.444 22.767-39.445-22.767v-45.535z"/></svg>ChatGPT</span>
+              <span class="pill"><svg class="pill-img" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 1.608 12 20.784H0Z"/></svg>Vercel</span>
+              <span class="pill"><svg class="pill-img" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</span>
+              <span class="pill"><svg class="pill-img" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.919 14.545 20.817 9.17l1.47-2.544a.56.56 0 0 0 0-.566l-1.633-2.83a.57.57 0 0 0-.49-.283h-6.207L12.487.402a.57.57 0 0 0-.49-.284H8.732a.56.56 0 0 0-.49.284L5.139 5.775h-2.94a.56.56 0 0 0-.49.284L.077 8.887a.56.56 0 0 0 0 .567L3.18 14.83l-1.47 2.545a.56.56 0 0 0 0 .566l1.634 2.83a.57.57 0 0 0 .49.283h6.205l1.47 2.545a.57.57 0 0 0 .49.284h3.266a.57.57 0 0 0 .49-.284l3.104-5.375h2.94a.57.57 0 0 0 .49-.283l1.634-2.828a.55.55 0 0 0-.004-.568M8.733.686l1.634 2.828-1.634 2.828H21.8L20.164 9.17H7.425L5.63 6.06Zm1.306 19.801-6.205-.002 1.634-2.83h3.265L2.201 6.344h3.267q3.182 5.517 6.367 11.032zm10.124-5.66L18.53 12l-6.532 11.315-1.634-2.83c2.129-3.673 4.25-7.351 6.373-11.028h3.592l3.102 5.374z"/></svg>Qwen</span>
+              <span class="pill"><svg class="pill-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10L7 17h10"/></svg>Z.ai</span>
             </div>
           </div>
         </div>
@@ -416,7 +445,7 @@
   <footer>
     <div class="wrap footer-inner">
       <p>© <span id="year">2026</span> Ditzzx. Dibangun tanpa framework, cukup HTML, CSS, dan JS.</p>
-      <a href="#top">Kembali ke atas</a>
+      <a href="#top">Kembali ke atas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5" /><path d="m5 12 7-7 7 7" /></svg></a>
     </div>
   </footer>
 
